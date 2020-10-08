@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script async src="https://arc.io/widget.js#9MbGh6ny"></script>
+    <title>Request!</title>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- import the webpage's javascript file -->
+    <script src="/Dom.js"></script>
+  </head>
+  <body>
+    <div id="left"></div>
+    <div id="right">
+      <div id="right_top"></div>
+      <div id="right_bottom"></div>
+    </div>
+    <script src="/json.js"></script>
+    <script src="/script.js"></script>
+
+    <script>
+      const worker = new Worker();
+      worker.log("GET", location.origin);
+      
+      const url = new URLSearchParams(location.search);
+      if (url.has("uri")) {
+        worker.right_top_map.get("Uri").element.value = url.get("uri");
+        worker.send();
+      }
+    </script>
+  </body>
+</html>
