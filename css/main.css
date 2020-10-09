@@ -6,22 +6,27 @@ body {
   width: 100%;
   position: absolute;
   top: 0;
+  overflow:hidden;
   color: white;
   left: 0;
 }
 
 .json-key,
-.json-formatter-key {
+.json-formatter-key,
+.number {
   color: #a8ffac !important;
 }
 
 .json-value,
-.json-formatter-value {
+.json-formatter-value,
+.boolean {
   color: skyblue !important;
 }
 
 .json-string,
-.json-formatter-string {
+.json-formatter-string,
+.string,
+.hljs-string {
   color: #ffffb0 !important;
 }
 
@@ -42,6 +47,7 @@ input,
 select,
 button,
 option,
+textarea,
 pre {
   padding: 7px;
   border: none;
@@ -102,3 +108,35 @@ option {
   background: #0000008f;
   backdrop-filter: blur(4px);
 }
+
+.request {
+  display: flex;
+  width: -webkit-fill-available;
+  background: #323232;
+  margin: 10px;
+  margin-top: 0;
+  border-radius: 3px;
+  padding: 8px;
+}
+
+.object {
+  display: flex;
+  margin-right: 10px;
+  background: #ffffff1a;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.object_block {
+  background: #00000052;
+  padding: 1px;
+  border: solid 1px #00000042;
+  border-radius: 4px;
+}
+
+.object span {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.hljs{display:block;overflow-x:auto;padding:.5em;background:#23241f}.hljs,.hljs-subst,.hljs-tag{color:#f8f8f2}.hljs-emphasis,.hljs-strong{color:#a8a8a2}.hljs-bullet,.hljs-link,.hljs-literal,.hljs-number,.hljs-quote,.hljs-regexp{color:#ae81ff}.hljs-code,.hljs-section,.hljs-selector-class,.hljs-title{color:#a6e22e}.hljs-strong{font-weight:700}.hljs-emphasis{font-style:italic}.hljs-attr,.hljs-keyword,.hljs-name,.hljs-selector-tag{color:#f92672}.hljs-attribute,.hljs-symbol{color:#66d9ef}.hljs-class .hljs-title,.hljs-params{color:#f8f8f2}.hljs-addition,.hljs-built_in,.hljs-builtin-name,.hljs-selector-attr,.hljs-selector-id,.hljs-selector-pseudo,.hljs-string,.hljs-template-variable,.hljs-type,.hljs-variable{color:#e6db74}.hljs-comment,.hljs-deletion,.hljs-meta{color:#75715e}
